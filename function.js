@@ -150,7 +150,7 @@ var playlistAnchor = document.querySelectorAll(".next-video"),
 var prevTitle = document.querySelector(".video-title"),
     prevDescription = document.querySelector(".description");
 
-    for (var i = 0; i < 4; i++) {
+    for (var i = 0; i < 5; i++) {
         (function(){
             var k = i;
 

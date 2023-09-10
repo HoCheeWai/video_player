@@ -3,10 +3,10 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>HTML Advance Video Player | Webdevtrick.com</title>
+  <title>HTML Advance Video Player | Originally from Webdevtrick.com</title>
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
@@ -17,7 +17,17 @@
 
       <header class="video-header">
         <h2 class="video-title">HTML 5 Video Player</h2>
-        <small class="video-author">Code By <a href="https://webdevtrick.com/">WebDevTrick</a></small>
+
+        <a href="https://soitestpool.auth.ap-southeast-1.amazoncognito.com/login?client_id=53a2cv74cv4ri4p1db6q990a13&response_type=token&scope=email+openid+phone+aws.cognito.signin.user.admin&redirect_uri=http%3A%2F%2Flocalhost/post_login.html">  
+          <input type="submit" value="Login" style="background-color:green; color:white;float: right;"/>  
+        </a>
+
+        <a href="https://soitestpool.auth.ap-southeast-1.amazoncognito.com/logout?client_id=53a2cv74cv4ri4p1db6q990a13&logout_uri=http%3A%2F%2Flocalhost/post_logout.html">  
+          <input type="submit" value="Logout" style="background-color:yellow; color:black;float: right;"/>  
+        </a>
+
+        <small class="video-author">Original Code By <a href="https://webdevtrick.com/">WebDevTrick</a></small>
+
       </header>
 
       <div class="video-column">
@@ -52,7 +62,26 @@
         <div class="video-info">
 
           <div class="description">
-            <p>How we can create a scrolling navigation bar using HTML and CSS? Solution: Horizontal Scroll Navigation Using HTML CSS, Scrolling Menu Bar.</p>
+            <p>Choose a video</p>
+          </div>
+
+          <div>
+          <table>
+            <tr>
+              <td>
+                <button  onclick="classifyVideo()" style="color:white; background-color: red">Classify</button>
+              </td>
+              <td style="padding: 10px">
+                <p id="result" style="color:black"></p>
+              </td>
+            </tr>
+          </div>
+          
+          <div class="userid">
+            <p align="center" id="userEmail" style="color:black"></p>
+            <script>
+              document.getElementById("userEmail").innerHTML = "Logged in as " + sessionStorage.getItem('userEmail');
+            </script>
           </div>
         </div>
       </div>
@@ -106,7 +135,10 @@
     </div>
   </section>
 </main>
-  <script  src="function.js"></script>
+
+<script src="classify.js"></script>
+<script src="config.js"></script>
+<script src="function.js"></script>
 
 </body>
 </html>
